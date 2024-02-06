@@ -10,3 +10,14 @@ spec:
       port: 80
       targetPort: 8088
   type: LoadBalancer
+---
+apiVersion: v1
+kind: Pod
+metadata:
+name: superset
+labels:
+name: superset
+spec:
+containers:
+- image: amancevice/superset:latest
+name: superset
